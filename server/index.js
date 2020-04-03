@@ -2,6 +2,8 @@ require("dotenv").config();
 const express = require('express');
 const massive = require('massive');
 
+const {getInventory} = require('./controller')
+
 const app = express();
 app.use(express.json());
 
@@ -17,7 +19,7 @@ massive({
     })
     .catch(err => console.log(err));
 
-// app.get('/api/shelfie', getInventory)
+app.get('/api/inventory', getInventory);
 
 
 

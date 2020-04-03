@@ -3,10 +3,13 @@ import Product from "../Product/Product";
 
 class Dashboard extends Component {
   render() {
+    let mappedInventory = this.props.inventory.map((val) => {
+      return <Product val={val} />;
+    });
     return (
       <div>
         <h1>Dashboard</h1>
-        <Product />
+        {mappedInventory}
       </div>
     );
   }

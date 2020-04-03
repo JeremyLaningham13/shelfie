@@ -2,9 +2,12 @@ import React, { Component } from "react";
 
 class Product extends Component {
   render() {
+    const {val} = this.props
     return (
       <div>
-        <h1>Product</h1>
+        <img src={val.img_url} />
+        <p>{val.name}</p>
+        <p>{val.price}</p>
       </div>
     );
   }

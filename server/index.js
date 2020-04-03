@@ -5,6 +5,7 @@ const massive = require('massive');
 const app = express();
 app.use(express.json());
 
+
 const { SERVER_PORT, CONNECTION_STRING } = process.env;
 
 massive({
@@ -15,6 +16,8 @@ massive({
         app.set("db", dbInstance);
     })
     .catch(err => console.log(err));
+
+// app.get('/api/shelfie', getInventory)
 
 
 

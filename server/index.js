@@ -3,6 +3,7 @@ const express = require('express');
 const massive = require('massive');
 
 const app = express();
+app.use(express.json());
 
 const { SERVER_PORT, CONNECTION_STRING } = process.env;
 
@@ -15,7 +16,6 @@ massive({
     })
     .catch(err => console.log(err));
 
-app.use(express.json());
 
 
 app.listen(SERVER_PORT, () => {

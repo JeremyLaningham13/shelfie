@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 class Header extends Component {
-  rendor() {
+  render() {
     return (
       <div>
         <h1>Header</h1>
